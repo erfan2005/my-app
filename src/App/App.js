@@ -1,5 +1,6 @@
-import Button from './Button'
-import './App.css';
+import Button from '../Button/Button';
+import '../App/App.css';
+
 function App() {
   return (
     <div className="App">
