@@ -1,4 +1,4 @@
-
+/* 
 .App {
   text-align: left;
   padding: 10px 20px;
@@ -10,5 +10,87 @@
 
 p {
   font-size: 15px;
+} */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
 }
 
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.shop-title {
+  font-size: 24px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+/* تنظیمات گرید (شبکه) برای لیست محصولات */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* 3 یا 4 ستونه شدن خودکار */
+  gap: 30px;
+  list-style-type: none; /* حذف نقطه‌های پیش‌فرض لیست */
+  padding: 0;
+  margin: 0;
+}
+
+/* استایل هر کارت محصول */
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* جلوگیری از کشیدگی عکس */
+  background-color: #eee;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.product-details h3 {
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.product-description {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 10px 0;
+  /* کوتاه کردن متن توضیحات به 2 خط */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #a0a0a0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: auto; /* چسبیدن دکمه به پایین */
+}
+
+.add-to-cart-btn:hover {
+  background-color: #f0f0f0;
+}
