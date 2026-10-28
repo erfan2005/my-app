@@ -1,4 +1,4 @@
 import './Button.css';
 
-const Button = () => <button className="button" >Click Here</button>;
+const Button = ({children}) => <button className="add-to-cart-btn">{children}</button>
 export default Button

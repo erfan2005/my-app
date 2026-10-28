@@ -1,0 +1,6 @@
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* جلوگیری از کشیدگی عکس */
+  background-color: #eee;
+}

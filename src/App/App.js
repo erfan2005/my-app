@@ -1,53 +1,37 @@
-// import '../App/App.css';
-// import Header from '../Header/Header';
-// import Footer from '../Footer/Footer';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <Header />
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from 'react';
 import './App.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import PRODUCTS from './PRODUCTS.json';
+import Products from '../Products/Products';
+import PRODUCTS from '../App/PRODUCTS.json';
+import {
+  BrowserRouter,
+  Route,
+  Routes
+} from 'react-router-dom';
 
 function App() {
-const productArray = PRODUCTS.products;
-
   return (
     <div className="App">
+      <BrowserRouter>
+      <Routes>
+        <Route path="/"
+        element={
+        <>
       <Header />
-      
-      <main className="main-content">
-        <h1 className="shop-title">Shop</h1>
-    
-        <ul className="products-grid">
-          {productArray.map((item) => (
-            <li key={item.id} className="product-card">
-              <img src={item.thumbnail} alt={item.title} className="product-image" />
-              
-              <div className="product-details">
-                <h3>{item.title}</h3>
-                <p className="product-description">{item.description}</p>
-                <span className="product-price">Price: ${item.price}</span>
-                <button className="add-to-cart-btn">Add to Cart</button>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </main>
-
+      <Products
+       data={PRODUCTS.products} 
+       />
       <Footer />
+      </>
+        }
+      />
+        <Route path="/about"
+        element={<div>About me</div>}
+        />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
-
 export default App;

@@ -47,12 +47,6 @@ body {
   flex-direction: column;
 }
 
-.product-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover; /* جلوگیری از کشیدگی عکس */
-  background-color: #eee;
-}
 
 .product-details {
   display: flex;
@@ -82,35 +76,3 @@ body {
   margin-bottom: 15px;
 }
 
-.add-to-cart-btn {
-  padding: 8px;
-  background-color: white;
-  border: 1px solid #a0a0a0;
-  cursor: pointer;
-  margin-top: auto; /* چسبیدن دکمه به پایین */
-  z-index: 1;
-  position: relative;
-  /* transition: all 0.6s; */
-  overflow: hidden;
-}
-
-.add-to-cart-btn::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 0;
-  left: 50%;
-  right: 50%;
-  transform: translateX(-50%) translateY(-50%) rotate(90deg);
-  background-color: green;
-  transition: all 0.7s;
-}
-
-.add-to-cart-btn:hover::before {
-  height: 1040%;
-}
-
-.add-to-cart-btn:hover {
-  color: white;
-}
