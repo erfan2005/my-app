@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import Layout from '../Layout/Layout';
 import Products from '../Products/Products';
-import PRODUCTS from '../App/PRODUCTS.json';
+import PRODUCTS from './PRODUCTS.json';
 import {
   BrowserRouter,
   Route,
@@ -18,11 +17,11 @@ function App() {
         <Route path="/"
         element={
         <>
-      <Header />
+        <Layout>
       <Products
        data={PRODUCTS.products} 
        />
-      <Footer />
+       </Layout>
       </>
         }
       />
